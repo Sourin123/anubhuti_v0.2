@@ -1,7 +1,9 @@
 .img_size{
     max-width: 240px;
+    position: relative;
+    top: -37px;
 }
 .icon_size{
     width: 42px;
-    margin-top: 23%
+    /* margin-top: 23% */
 }

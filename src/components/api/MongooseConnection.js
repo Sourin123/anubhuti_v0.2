@@ -1,9 +1,11 @@
-const mongo = require("mongoose");
+import mongoose from "mongoose";
 var url = "mongodb+srv://sourinsaha2001:4pGLHdvfCBDhuIuw@cluster0.gate6ou.mongodb.net/anubhuti";
-mongo.connect(url).then(console.log("connection successful" )).catch((err)=>{
+mongoose.connect(url,{
+    useMongoClient: true
+  }).then(console.log("connection successful" )).catch((err)=>{
     console.log(err);
 });
-const BookSchema = new mongo.Schema({
+const BookSchema = new mongoose.Schema({
        
         "ISBN13": {
             type : String
@@ -53,7 +55,7 @@ const BookSchema = new mongo.Schema({
       
 });
 
-const BookModule = mongo.model('BookModule',BookSchema);
+const BookModule = mongoose.model('BookModule',BookSchema);
 // var dataTest=[{
     
 //     "id": 1,
@@ -78,7 +80,7 @@ const BookModule = mongo.model('BookModule',BookSchema);
 //     } catch (error) {
 //         console.log(error);
 //     }finally{
-//         mongo.connection.close();
+//         mongoose.connection.close();
 //     }
 // }
 // main();

@@ -1,15 +1,35 @@
-import React from 'react'
-import bookModule from '../api/db'
+import React, { useState } from 'react'
 import "../stylesheet/style.css"
+import { Container } from 'react-bootstrap'
+import Cards from './Cards'
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
-const books = () => {
+import { useEffect } from "react";
+import axios from "axios"
+
+
+
+
+
+const Books = () => {
+  useEffect(() => {
+    (async () => {
+        try {
+            const result = await axios.get(
+                "http://localhost:4000/api")
+            console.log(result.data);
+        } catch (error) {
+            console.error(error);
+        }
+    })()
+})
   return (
     <>
-      <div className='container'>
-          <div className='h1'>
-            working SuccessFully
-          </div>
-      </div>
+      <Container  >
+      <div className=" card-group">
+        <Cards/> 
+        </div>
+      </Container>
     </>
   )
 }
