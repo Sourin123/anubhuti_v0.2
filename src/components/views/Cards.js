@@ -19,7 +19,7 @@ const Cards = () => {
             return (
               // {name}
               <a href="/" className="link-offset-2 link-underline link-underline-opacity-0">
-              <div className="col">
+              <div className="col" key={__id}>
     <div className="card" style={{
       maxWidth : "18rem",
     }}>

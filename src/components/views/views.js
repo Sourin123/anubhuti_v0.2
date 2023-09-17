@@ -3,7 +3,6 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Cards from './Cards'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import { useGlobalContext } from '../api/globalContex'
 
 // import { useEffect } from "react";
 // import axios from "axios"

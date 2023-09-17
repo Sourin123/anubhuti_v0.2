@@ -15,10 +15,14 @@ const reducer = (state,action) =>{
                 isLoading: false,
                 books: action.payload.books,
             }
+        default:
+            return{
+                ...state,
+            
+            }
     
         
     }
 
-    return state;
 }
 export default reducer;
