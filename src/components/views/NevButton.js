@@ -13,8 +13,8 @@ const NevButton = () => {
           }}>
             <div className=" btn btn-outline-primary"> All </div>
             <div className="btn  btn-outline-primary">Educational </div>
-            <div className="btn btn-outline-primary">  literature</div>
-            <div className="btn btn-outline-primary overflow-hidden"> other genre</div>
+            <div className="btn btn-outline-primary">  Literature</div>
+            <div className="btn btn-outline-primary overflow-hidden"> Other Genre</div>
           </div>
         </div>
       </div>
