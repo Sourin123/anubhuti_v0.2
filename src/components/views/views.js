@@ -3,6 +3,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Cards from './Cards'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import NevButton from './NevButton'
 
 // import { useEffect } from "react";
 // import axios from "axios"
@@ -28,6 +29,7 @@ const Books = () => {
   return (
     <>
       <Container  >
+        <NevButton></NevButton>
       <div className=" card-group">
         <Cards/> 
       

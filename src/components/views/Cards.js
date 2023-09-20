@@ -15,10 +15,10 @@ const Cards = () => {
       <div className="container">
         <div className="row row-cols-1 row-cols-md-4 g-4">
           {books.map((curEle) => {
-            const { name, img, author, __id } = curEle;
+            const { name, img, author, __id, uri } = curEle;
             return (
               // {name}
-              <a href="/" className="link-offset-2 link-underline link-underline-opacity-0">
+              <a href={uri}  className="link-offset-2 link-underline link-underline-opacity-0" target=" _blank">
               <div className="col" key={__id}>
     <div className="card" style={{
       maxWidth : "18rem",

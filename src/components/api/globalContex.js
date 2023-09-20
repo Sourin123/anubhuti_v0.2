@@ -1,6 +1,6 @@
 import React,{ useContext,useReducer,useEffect } from "react";
 import reducer from "./reducer";
-let API = "http://localhost:4000/api";
+let API = "https://anuvutibackend.onrender.com/api";
 const initialState ={
     isLoading : true,
     books :[],
@@ -20,7 +20,7 @@ const AppProvider = ({children}) =>{
         try {
             const res = await fetch(url);
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             dispatch({
                 type : "GET_BOOKS",
                 payload : {
