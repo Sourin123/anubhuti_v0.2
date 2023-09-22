@@ -1,16 +1,17 @@
 import React from 'react'
-import Books from './components/views/views'
-import Header from './components/common/header'
-import Footer from './components/common/footer'
+import { Route, Routes } from "react-router-dom";
+import Home from './home';
+import About from './About';
+
+
 
 const App = () => {
   return (
     <>
-    < Header/>
-     
-      <Books></Books>
-      
-      <Footer/>
+    <Routes>
+      <Route path='/' Component={Home}/>
+      <Route path='/about' Component={About}/>
+    </Routes>
     </>
   )
 }
