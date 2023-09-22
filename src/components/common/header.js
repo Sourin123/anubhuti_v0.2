@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css"
+// import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -21,7 +23,7 @@ const Header =() =>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link> <Link to="/" className=" text-decoration-none text-black-50"> Home </Link> </Nav.Link>
             <Nav.Link href="#link">Newly Arrived</Nav.Link>
             <NavDropdown title="Writer" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Kunal Kumar Mondal</NavDropdown.Item>
@@ -34,7 +36,7 @@ const Header =() =>{
 
               
             </NavDropdown>
-            <Nav.Link href="/about">About </Nav.Link>
+            <Nav.Link ><Link to="/about" className=" text-decoration-none text-black-50"> About </Link> </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <form class="d-flex mx-5" role="search">
